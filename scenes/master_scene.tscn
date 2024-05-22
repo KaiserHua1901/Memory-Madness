@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8rfvob1alhoo"]
+[gd_scene load_steps=3 format=3 uid="uid://b8rfvob1alhoo"]
 
 [ext_resource type="Texture2D" uid="uid://dh6855b78srno" path="res://assets/images/backgroundEmpty.png" id="1_rnls7"]
+[ext_resource type="PackedScene" uid="uid://cla7sy4gkcvdr" path="res://scenes/main_scene.tscn" id="2_ovywx"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="MasterScene" type="CanvasLayer"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -11,3 +12,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_rnls7")
+
+[node name="MainScene" parent="." instance=ExtResource("2_ovywx")]

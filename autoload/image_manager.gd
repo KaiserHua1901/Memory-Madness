@@ -4,7 +4,7 @@ var item_images:Array = []
 
 func _ready():
 	load_items_image() 
-	print(item_images)
+
 
 func add_files_to_list(file_name:String, path:String):
 	var full_path = path + "/" + file_name
@@ -21,6 +21,7 @@ func load_items_image():
 	var path = "res://assets/glitch"
 	var dir = DirAccess.open(path)
 	var image_files = dir.get_files()
+	print(image_files)
 	# var image_name = dir.list_dir_begin()
 
 	for file_name in image_files:

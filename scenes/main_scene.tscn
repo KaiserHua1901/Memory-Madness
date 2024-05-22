@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cla7sy4gkcvdr"]
+
+[ext_resource type="FontFile" uid="uid://bmbfgf88y6abt" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_b77gr"]
+[ext_resource type="PackedScene" uid="uid://dge8c0u1rsvba" path="res://scenes/Sprites.tscn" id="2_basc5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqd8l"]
+font = ExtResource("1_b77gr")
+font_size = 72
+outline_size = 6
+outline_color = Color(0.534501, 0.168437, 0.110815, 0.639216)
+
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.0392157, 0.219608, 0.262745, 0.360784)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VB" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VB"]
+layout_mode = 2
+text = "MEMORY OF MADNESS"
+label_settings = SubResource("LabelSettings_oqd8l")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control3" type="Control" parent="MarginContainer/VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Sprites" parent="MarginContainer/VB/HBoxContainer2" instance=ExtResource("2_basc5")]
+layout_mode = 2
+
+[node name="Sprites2" parent="MarginContainer/VB/HBoxContainer2" instance=ExtResource("2_basc5")]
+layout_mode = 2
+
+[node name="Sprites3" parent="MarginContainer/VB/HBoxContainer2" instance=ExtResource("2_basc5")]
+layout_mode = 2
+
+[node name="Sprites4" parent="MarginContainer/VB/HBoxContainer2" instance=ExtResource("2_basc5")]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VB"]
+layout_mode = 2
+size_flags_vertical = 3
